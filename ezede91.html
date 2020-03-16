@@ -1,0 +1,73 @@
+<head>
+	<meta charset="utf-8"/>
+	<title>СамГАПС</title>
+	<link rel="stylesheet" type="text/css" href="head.css">
+	<link rel="stylesheet" type="text/css" href="body.css">
+	<script type="text/javascript" src="ezd91.js"></script>
+	<script type="text/javascript" src="timesettings.js"></script>
+	<div class="header">
+		<div class="header_menu">
+			<div class="header_menu_samgaps">
+			    <h1>Сам<span>ГАПС</span></h1>
+			    <a>beta</a>
+		    </div>
+		    <div class="header_menu_help">
+		    	<a href="https://vk.com/ntoropovsky"><h1><li>Разработчик</li></h1></a>
+		    </div>
+		</div>
+	</div>
+</head>
+<body>
+	<center>
+		<div id="menu">Расписание<hr id="hr"></div>
+	</center>
+	<script type="text/javascript">
+	</script>
+	<div id="pastweek"style="background-color: rgb(100,149,237);margin-left: 24.5%;width: 400px;height: 50px" class="buttonsettings"><h3 class="buttonsettingtext" style="color: rgb(255,255,255);margin-left: 10% "><</h3></div>
+	<div id="pastweek"style="background-color: rgb(100,149,237);margin-left: 10%;width: 400px;height: 50px" class="buttonsettings"><h3 class="buttonsettingtext" style="color: rgb(255,255,255);margin-left: 10% ">></h3></div>
+	<script type="text/javascript">
+		pastweek.onclick = function()
+		{
+			changeweek(WeekNow, WeekNow-1);
+		}
+	</script>
+	<div id="body_blogs">
+		<div id="blog">
+			<div id="Block">
+					<h1>СамГАПС beta</h1>
+					<div id="Days">
+					 <script type="text/javascript">
+	            	
+	            	var DayNow       = new Date().getDay(),                                         
+	            	    DateN        = new Date(2020,1,17),                                         
+	            	    DateNow      = new Date(),
+	            	    DateRaznica  = Math.ceil(Math.abs(DateNow - DateN) / (1000 * 3600 * 24)),
+	            	    WeekNow      = Math.ceil(DateRaznica / 7),
+	            	    
+	            	    DateConvert  = DayNow;
+
+	            	if (DateConvert == 0) DateConvert = 6; else DateConvert--;
+	            	var i = 0;
+	            	createweek(WeekNow, WeekNow);
+	                </script>
+	                </div>
+	                <div id="Chat" class="chat">
+	                	</div>
+	                </div>
+						</div>		
+						<script type="text/javascript">
+
+							i=0;
+							let versusbagweek = weekinfo(WeekNow);
+							while (alllessons(weekinfo(WeekNow),DateConvert) > i)
+							{
+							   createpara(para(versusbagweek,DateConvert,i),auditorium(versusbagweek,DateConvert,i),"Данные пусты",paratimestart(paratime(versusbagweek,DateConvert,i)),paratimestop(paratime(versusbagweek,DateConvert,i)));
+							   i++;
+							}
+						</script>		
+				</div>
+
+			</div>
+		</div>
+	</div>
+</body>
